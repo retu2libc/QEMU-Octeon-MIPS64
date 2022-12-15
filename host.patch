@@ -3806,16 +3806,6 @@ diff -rupN qemu-1.0.1/qmp-commands.h modified_QEMU/qmp-commands.h
 +int qmp_marshal_input_cpu(Monitor *mon, const QDict *qdict, QObject **ret);
 +
 +#endif
-diff -rupN qemu-1.0.1/roms/ipxe/src/bin/.gitignore modified_QEMU/roms/ipxe/src/bin/.gitignore
---- qemu-1.0.1/roms/ipxe/src/bin/.gitignore	2012-02-17 11:46:04.000000000 -0800
-+++ modified_QEMU/roms/ipxe/src/bin/.gitignore	1969-12-31 16:00:00.000000000 -0800
-@@ -1 +0,0 @@
--*
-diff -rupN qemu-1.0.1/roms/ipxe/src/config/local/.gitignore modified_QEMU/roms/ipxe/src/config/local/.gitignore
---- qemu-1.0.1/roms/ipxe/src/config/local/.gitignore	2012-02-17 11:46:04.000000000 -0800
-+++ modified_QEMU/roms/ipxe/src/config/local/.gitignore	1969-12-31 16:00:00.000000000 -0800
-@@ -1 +0,0 @@
--*
 diff -rupN qemu-1.0.1/roms/seabios/config.mak modified_QEMU/roms/seabios/config.mak
 --- qemu-1.0.1/roms/seabios/config.mak	1969-12-31 16:00:00.000000000 -0800
 +++ modified_QEMU/roms/seabios/config.mak	2015-02-11 23:03:07.079967000 -0800
@@ -3828,47 +3818,6 @@ diff -rupN qemu-1.0.1/roms/seabios/config.mak modified_QEMU/roms/seabios/config.
 +OBJCOPY=objcopy
 +IASL=iasl
 +LD=ld
-diff -rupN qemu-1.0.1/roms/SLOF/clients/net-snk/make.depend modified_QEMU/roms/SLOF/clients/net-snk/make.depend
---- qemu-1.0.1/roms/SLOF/clients/net-snk/make.depend	2012-02-17 11:45:49.000000000 -0800
-+++ modified_QEMU/roms/SLOF/clients/net-snk/make.depend	1969-12-31 16:00:00.000000000 -0800
-@@ -1,36 +0,0 @@
--# *****************************************************************************
--# * Copyright (c) 2004, 2008 IBM Corporation
--# * All rights reserved.
--# * This program and the accompanying materials
--# * are made available under the terms of the BSD License
--# * which accompanies this distribution, and is available at
--# * http://www.opensource.org/licenses/bsd-license.php
--# *
--# * Contributors:
--# *     IBM Corporation - initial implementation
--# ****************************************************************************/
--
---include .depend
--
--depend :
--	@rm -rf .depend
--ifdef OBJS
--	@touch .depend && \
--	$(CC) -M $(CPPFLAGS) $(CFLAGS) $(OBJS:.o=.c) >> .depend
--#else
--#	@echo "OBJ is NOT defined"
--endif
--ifdef OBJS2
--	@$(CC) -M $(CPPFLAGS) $(CFLAGS) $(OBJS2:.o=.S) >> .depend
--#else
--#	@echo "OBJ2 is NOT definde"
--endif
--	@for dir in $(SUBDIRS); do \
--		$(MAKE) -C $$dir depend ; \
--	done
--
--mrproper : 
--	@rm -rf .depend ; \
--	for dir in $(SUBDIRS); do \
--		$(MAKE) -C $$dir mrproper ; \
--	done
-Binary files qemu-1.0.1/roms/SLOF/FlashingSLOF.pdf and modified_QEMU/roms/SLOF/FlashingSLOF.pdf differ
 diff -rupN qemu-1.0.1/roms/vgabios/config.mak modified_QEMU/roms/vgabios/config.mak
 --- qemu-1.0.1/roms/vgabios/config.mak	1969-12-31 16:00:00.000000000 -0800
 +++ modified_QEMU/roms/vgabios/config.mak	2015-02-11 23:03:07.084967000 -0800
