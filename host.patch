@@ -2565,12 +2565,13 @@ diff -rupN qemu-1.0.1/softmmu_template.h modified_QEMU/softmmu_template.h
 +extern int glob_e1000_int;
 +extern int glob_uart_int;
 +extern CPUState * envArray[12];
-+int state1,state2,state3,state4,state5,state6,state7,state8,state9,state10,state11,state12;
++extern int state1,state2,state3,state4,state5,state6,state7,state8,state9,state10,state11,state12;
  #define DATA_SIZE (1 << SHIFT)
  
  #if DATA_SIZE == 8
-@@ -62,6 +72,77 @@ static inline DATA_TYPE glue(io_read, SU
+@@ -62,6 +72,78 @@ static inline DATA_TYPE glue(io_read, SU
  {
++    int state1,state2,state3,state4,state5,state6,state7,state8,state9,state10,state11,state12;
      DATA_TYPE res;
      int index;
 +     uint64_t ciu_sum0_address; //added by maryyam
@@ -2821,11 +2822,12 @@ diff -rupN qemu-1.0.1/softmmu_template.h modified_QEMU/softmmu_template.h
              ioaddr = env->iotlb[mmu_idx][index];
              res = glue(io_read, SUFFIX)(ioaddr, addr, retaddr);
          } else if (((addr & ~TARGET_PAGE_MASK) + DATA_SIZE - 1) >= TARGET_PAGE_SIZE) {
-@@ -205,6 +424,120 @@ static inline void glue(io_write, SUFFIX
+@@ -205,6 +424,121 @@ static inline void glue(io_write, SUFFIX
                                            void *retaddr)
  {
      int index;
 +    uint64_t ciu_sum0_address;
++    int state1,state2,state3,state4,state5,state6,state7,state8,state9,state10,state11,state12;
 +   // qemu_irq irq;
 +  // CPUMIPSState * mips; 
 +   //PITChannelState *s;
