@@ -1,3 +1,17 @@
-Read the documentation in qemu-doc.html.
+How to use:
 
-Fabrice Bellard.
+At the time of writing this is the intended build process:
+
+```
+./configure --target-list=mips64-softmmu
+patch -p1 < host.patch
+make -j`nproc`
+```
+
+I make no guarantees beyond what the initial paper did for this.
+
+My only goal here was to fix the problems with the original repo which I feel I have done
+
+TODO:
+Add a Dockerfile with a tagged version of debian that this can build in
+Add scuba build support
