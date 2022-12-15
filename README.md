@@ -3,6 +3,7 @@
 At the time of writing this is the intended build process:
 
 ```bash
+./build.sh
 scuba clean
 scuba patch
 scuba configure
