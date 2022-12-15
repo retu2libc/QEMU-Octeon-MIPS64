@@ -3,9 +3,10 @@
 At the time of writing this is the intended build process:
 
 ```bash
-./configure --target-list=mips64-softmmu
-patch -p1 < host.patch
-make -j`nproc`
+scuba clean
+scuba patch
+scuba configure
+scuba build
 ```
 
 I make no guarantees beyond what the initial paper did for this.
@@ -23,7 +24,5 @@ not present in the tar archives online. You could use the tar files
 although I am unsure how critical the effects some of the bugs were.
 
 # TODO:
-1.) Add a Dockerfile with a tagged version of debian that this can build in  
-2.) Add scuba build support  
-3.) Fix the paper's linux patch as well  
-4.) Move the backported fixes to separate branch?  
+1.) Fix the paper's linux patch as well  
+2.) Move the backported fixes to separate branch?  
