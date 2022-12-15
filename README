@@ -10,8 +10,13 @@ make -j`nproc`
 
 I make no guarantees beyond what the initial paper did for this.
 
-My only goal here was to fix the problems with the original repo which I feel I have done
+The paper while impressive produced unusable artifacts for a variety of reasons.
+
+As a result I set out to fix the problems with the original repo.
+
+I feel I have done that and produced a repeatable and stable build system.
 
 TODO:
 Add a Dockerfile with a tagged version of debian that this can build in
 Add scuba build support
+Fix the paper's linux patch as well
