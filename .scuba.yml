@@ -10,6 +10,7 @@ aliases:
         script:
           - git reset HEAD --hard
           - git clean -fd
+          - make clean
     make:
         script:
           - make
