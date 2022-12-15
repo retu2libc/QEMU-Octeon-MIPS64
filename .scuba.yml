@@ -8,9 +8,9 @@ aliases:
           - patch -p1 < host.patch
     clean:
         script:
+          - make clean
           - git reset HEAD --hard
           - git clean -fd
-          - make clean
     build:
         script:
           - make -j`nproc`
