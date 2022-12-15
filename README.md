@@ -3,7 +3,6 @@ How to use:
 At the time of writing this is the intended build process:
 
 ```bash
-Rendered code block with Ruby syntax highlighting
 ./configure --target-list=mips64-softmmu
 patch -p1 < host.patch
 make -j`nproc`
