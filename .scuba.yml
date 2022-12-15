@@ -1,0 +1,15 @@
+image: scuba/qemu:latest
+aliases:
+    configure:
+        script:
+          - ./configure --target-list=mips64-softmmu --python=/usr/bin/python3
+    patch:
+        script:
+          - patch -p1 < host.patch
+    clean:
+        script:
+          - git reset HEAD --hard
+          - git clean -fd
+    make:
+        script:
+          - make
