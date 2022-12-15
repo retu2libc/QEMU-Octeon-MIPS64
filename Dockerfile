@@ -4,7 +4,7 @@ RUN apt-get update                              \
  && DEBIAN_FRONTEND=noninteractive              \
     apt-get install -y --no-install-recommends  \
         gcc                                     \
-        python3                                 \
+        python2                                 \
         zlib1g-dev                              \
         pkg-config                              \
         libglib2.0-dev                          \
