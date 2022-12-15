@@ -21,8 +21,7 @@ I feel I have done that and produced a repeatable and stable build system.
 You may be wondering why I have included the unpacked qemu-1.0.1 files...
 
 The answer is that I am backporting fixes I deem necessary to core functionality
-not present in the tar archives online. You could use the tar files
-although I am unsure how critical the effects some of the bugs were.
+not present in the tar archives online. You *theoretically* just use the tar file
 
 # TODO:
 1.) Fix the paper's linux patch as well  
