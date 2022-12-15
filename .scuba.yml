@@ -13,4 +13,4 @@ aliases:
           - make clean
     build:
         script:
-          - make
+          - make -j`nproc`
