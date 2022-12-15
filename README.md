@@ -8,6 +8,7 @@ scuba clean
 scuba patch
 scuba configure
 scuba build
+scuba ./mips64-softmmu/qemu-system-mips64 -m 256 -M octeon -nographic -bios /u-boot-octeon_ebh5610.bin -kernel /vmlinux.64 -append 'coremask=0xfff mem=0 root=/dev/sda2'
 ```
 
 I make no guarantees beyond what the initial paper did for this.
