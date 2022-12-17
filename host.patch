@@ -73,11 +73,6 @@ diff -rupN qemu-1.0.1/cpu-exec.c modified_QEMU/cpu-exec.c
      return tb;
  }
  
-diff -rupN qemu-1.0.1/default-configs/mips64-linux-user.mak modified_QEMU/default-configs/mips64-linux-user.mak
---- qemu-1.0.1/default-configs/mips64-linux-user.mak	1969-12-31 16:00:00.000000000 -0800
-+++ modified_QEMU/default-configs/mips64-linux-user.mak	2015-01-29 09:21:22.000000000 -0800
-@@ -0,0 +1 @@
-+# Default configuration for mips64-linux-user
 diff -rupN qemu-1.0.1/exec.c modified_QEMU/exec.c
 --- qemu-1.0.1/exec.c	2012-02-17 11:45:39.000000000 -0800
 +++ modified_QEMU/exec.c	2015-01-29 09:21:16.000000000 -0800

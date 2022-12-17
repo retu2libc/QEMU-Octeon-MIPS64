@@ -8,6 +8,7 @@ aliases:
           - patch -p1 < host.patch
     clean:
         script:
+          - ./configure --python=/usr/bin/python2
           - make clean
           - git reset HEAD --hard
           - git clean -fd
